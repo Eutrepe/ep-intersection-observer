@@ -14,7 +14,7 @@ export class EpIntersectionObserverStatusService {
     return this.subject.asObservable();
   }
 
-  public send(status: IntersectionObserverEvent) {
+  public send(status: IntersectionObserverEvent): void {
     this.subject.next(status);
   }
 }

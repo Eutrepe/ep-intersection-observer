@@ -69,7 +69,7 @@ export class EpIntersectionObserverDirective implements OnInit, AfterViewInit, O
     this.edgePolyfill();
   }
 
-  private edgePolyfill() {
+  private edgePolyfill(): void {
     if (
       this.window &&
       'IntersectionObserver' in this.window &&
@@ -80,7 +80,7 @@ export class EpIntersectionObserverDirective implements OnInit, AfterViewInit, O
     ) {
       // tslint:disable-next-line: no-string-literal
       Object.defineProperty(this.window['IntersectionObserverEntry']['prototype'], 'isIntersecting', {
-        get() {
+        get(): boolean {
           return this.intersectionRatio > 0;
         },
       });
@@ -137,7 +137,7 @@ export class EpIntersectionObserverDirective implements OnInit, AfterViewInit, O
     }
   }
 
-  private initObserver() {
+  private initObserver(): void {
     this.observer = new IntersectionObserver((entries: Array<IntersectionObserverEntry>) => {
       entries.forEach((entry: IntersectionObserverEntry) => {
         if (entry.isIntersecting) {
@@ -188,14 +188,14 @@ export class EpIntersectionObserverDirective implements OnInit, AfterViewInit, O
     this.observer.observe(this.el.nativeElement);
   }
 
-  private incrementAssetsCounter() {
+  private incrementAssetsCounter(): void {
     this.assetsCounter++;
     if (this.assetsCounter === this.assetsLength) {
       this.initObserver();
     }
   }
 
-  private checkMedia() {
+  private checkMedia(): void {
     const images: Array<HTMLImageElement> = this.el.nativeElement.querySelectorAll('img');
     const videos: Array<HTMLVideoElement> = this.el.nativeElement.querySelectorAll('video');
     const audios: Array<HTMLAudioElement> = this.el.nativeElement.querySelectorAll('audio');

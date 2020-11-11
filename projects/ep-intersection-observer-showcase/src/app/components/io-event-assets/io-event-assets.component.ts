@@ -50,7 +50,7 @@ export class IoEventAssetsComponent implements OnInit {
     }
   }
 
-  private incrementCounter() {
+  private incrementCounter(): void {
     this.assetsCounter++;
     if (this.assetsCounter === this.assetsLength) {
       // ***** We send event with default group name: '' (empty string) *****

@@ -13,7 +13,7 @@ export class EpIntersectionObserverWatchService {
     return this.subject.asObservable();
   }
 
-  public start(groupName: string = '') {
+  public start(groupName: string = ''): void {
     this.subject.next(groupName);
   }
 }
