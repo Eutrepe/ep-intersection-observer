@@ -16,7 +16,10 @@
     "build:lib": "npm run copy:readme && ng build ep-intersection-observer",
     "build:showcase": "ng build ep-intersection-observer-showcase --base-href='https://Eutrepe.github.io/ep-intersection-observer/'",
     "publish:demo": "npx angular-cli-ghpages --dir=./dist/ep-intersection-observer-showcase",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "adjust-version": "npm-run-all adjust-version:*",
+    "adjust-version:lib": "rjp projects/ep-intersection-observer/package.json version $VERSION",
+    "adjust-version:main": "rjp package.json version $VERSION"
   },
   "private": true,
   "dependencies": {
@@ -39,6 +42,7 @@
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@commitlint/prompt": "^11.0.0",
+    "@semantic-release/exec": "^5.0.0",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
@@ -57,10 +61,10 @@
     "ng-packagr": "^10.1.0",
     "prettier": "^2.1.2",
     "protractor": "~7.0.0",
+    "semantic-release": "^17.2.2",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.0.2",
-    "semantic-release": "^17.2.2"
+    "typescript": "~4.0.2"
   },
   "husky": {
     "hooks": {
