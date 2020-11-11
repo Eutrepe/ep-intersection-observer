@@ -267,6 +267,3 @@ const defaultConfig: IntersectionObserveConfig = {
   }
 ```
 
-
-Examples:
-
