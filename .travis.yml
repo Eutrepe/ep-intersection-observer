@@ -1,5 +1,4 @@
 dist: trusty
-sudo: required
 language: node_js
 node_js:
 - "12"
@@ -31,7 +30,7 @@ jobs:
     - npm run build:demo
     deploy:
       provider: pages
-      skip_cleanup: true
+      cleanup: false
       github_token: $GH_TOKEN
       local_dir: dist/ep-intersection-observer
     if: branch = main
