@@ -32,7 +32,8 @@ jobs:
     deploy:
       provider: pages
       cleanup: false
-      github_token: $GH_TOKEN
+      strategy: git
+      token: $GH_TOKEN
       local_dir: dist/ep-intersection-observer
     if: branch = main
   - stage: build & publish lib
