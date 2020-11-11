@@ -1,0 +1,26 @@
+<!-- In this case we connect menu and sections with intersection observe. Our section has output `epIoViewportChange` which inform us when visibility was changed. More code in .ts -->
+
+<section class="section" id="{{number}}" ep-io (epIoViewportChange)="onSectionChange($event)"
+  *ngFor="let number of [1,2,3,4,5,6,7,8,9,10];">
+
+  <p>Section {{number}}</p>
+
+</section>
+
+
+<section class="section" id="11" ep-io (epIoViewportChange)="onSectionChange($event)">
+
+  <p>Section 11</p>
+
+</section>
+
+
+<nav>
+  <a href="#{{number}}" #menuItemRef (click)="onClick($event)" *ngFor="let number of [1,2,3,4,5,6,7,8,9,10,11];">Section
+    {{number}}</a>
+</nav>
+
+
+<div class=" trigger trigger--top">
+  <div class="triangle"></div>
+</div>

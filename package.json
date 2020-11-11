@@ -1,12 +1,22 @@
 {
-  "name": "ep-intersection-observer",
-  "version": "0.0.0",
+  "name": "@eutrepe/ep-intersection-observer",
+  "version": "0.0.0-development",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "npm run build:lib && npm run build:showcase",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "format:check": "prettier --list-different 'projects/**/*.ts'",
+    "format:write": "prettier --write 'projects/**/*.ts'",
+    "test:lib-coverage": "ng test ep-intersection-observer --code-coverage --watch=false",
+    "report-coverage:lib": "cat ./coverage/ep-intersection-observer/lcov.info | codecov",
+    "copy:readme": "copyfiles ./README.md ./dist/ep-intersection-observer",
+    "build:lib": "npm run copy:readme && ng build ep-intersection-observer",
+    "build:showcase": "ng build ep-intersection-observer-showcase --base-href='https://Eutrepe.github.io/ep-intersection-observer/'",
+    "publish:demo": "npx angular-cli-ghpages --dir=./dist/ep-intersection-observer-showcase",
+    "semantic-release": "semantic-release"
   },
   "private": true,
   "dependencies": {
@@ -23,12 +33,19 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~0.1002.0",
     "@angular/cli": "~10.2.0",
     "@angular/compiler-cli": "~10.2.0",
-    "@types/node": "^12.11.1",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/prompt": "^11.0.0",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
+    "codecov": "^3.8.1",
     "codelyzer": "^6.0.0",
+    "copyfiles": "^2.4.0",
+    "husky": "^4.3.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.0.0",
@@ -36,9 +53,34 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "lint-staged": "^10.5.1",
+    "ng-packagr": "^10.1.0",
+    "prettier": "^2.1.2",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.0.2"
+    "typescript": "~4.0.2",
+    "semantic-release": "^17.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "projects/**/*.ts": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Eutrepe/ep-intersection-observer.git"
   }
 }

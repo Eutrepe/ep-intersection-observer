@@ -1,0 +1,23 @@
+<!-- In this component we use default directive configuration overwritten by global configuration for ep-io directive from app.routing.module.ts -->
+<!-- We use tomato color for section which minimum 1px is in interesting area (20% view from top, 20% view from bottom) -->
+
+<section class="section" ep-io *ngFor="let number of [1,2,3,4,5,6,7,8,9,10];">
+
+  <p>Section {{number}}</p>
+
+</section>
+
+
+<section class="section" ep-io>
+
+  <p>Section 11</p>
+
+</section>
+
+
+<div class="trigger trigger--top">
+  <div class="triangle"></div>
+</div>
+<div class="trigger trigger--bottom">
+  <div class="triangle"></div>
+</div>

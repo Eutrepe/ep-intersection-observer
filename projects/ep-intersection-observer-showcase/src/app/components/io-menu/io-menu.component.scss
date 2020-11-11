@@ -1,0 +1,80 @@
+.section {
+  background-color: turquoise;
+  height: 50vh;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid white;
+
+  &.in-viewport {
+    background-color: tomato;
+  }
+}
+
+
+p {
+  margin: 0;
+  font-size: 2em;
+  color: black;
+}
+
+
+
+nav {
+  position: fixed;
+  top: 5%;
+  background-color: rgba(black, .8);
+  left: 10%;
+  z-index: 1000;
+  max-width: 200px;
+  width: 100%;
+  padding: 10px 0;
+
+  a {
+    display: block;
+    padding: 8px 15px;
+    color: white;
+    text-decoration: none;
+
+
+    &.is-active {
+      background-color: slategrey;
+    }
+  }
+}
+
+
+
+.trigger {
+  position: fixed;
+  right: 0;
+
+  &--top {
+    top: 50%;
+
+    .triangle {
+      transform: translateY(-50%);
+
+      &:before {
+        content: "top 50%";
+      }
+    }
+  }
+}
+
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 24px 50px 24px 0;
+  border-color: transparent white transparent transparent;
+
+  &:before {
+    position: absolute;
+    top: -6px;
+    right: 11px;
+    white-space: nowrap;
+  }
+}

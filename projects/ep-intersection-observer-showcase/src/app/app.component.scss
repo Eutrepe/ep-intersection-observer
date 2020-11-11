@@ -1,0 +1,16 @@
+.el {
+  height: 250px;
+  background: gray;
+  // min-height: 100px;
+  overflow: hidden;
+
+  // img {
+  //   max-width: 100%;
+  //   width: 100%;
+  //   display: block;
+  // }
+
+  &:nth-child(2n) {
+    background: lightgray;
+  }
+}

@@ -1,0 +1,73 @@
+.section {
+  background-color: turquoise;
+  height: 50vh;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid white;
+  overflow: hidden;
+
+  &.in-viewport {
+    background-color: tomato;
+  }
+}
+
+
+
+.media {
+  text-align: center;
+
+  img {
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+  }
+}
+
+
+
+.trigger {
+  position: fixed;
+  right: 0;
+
+  &--top {
+    top: 20%;
+
+    .triangle {
+      transform: translateY(-50%);
+
+      &:before {
+        content: "top 20%";
+      }
+    }
+  }
+
+  &--bottom {
+    bottom: 20%;
+
+    .triangle {
+      transform: translateY(50%);
+
+      &:before {
+        content: "bottom 20%";
+      }
+    }
+  }
+}
+
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 24px 50px 24px 0;
+  border-color: transparent white transparent transparent;
+
+  &:before {
+    position: absolute;
+    top: -6px;
+    right: 11px;
+    white-space: nowrap;
+  }
+}
