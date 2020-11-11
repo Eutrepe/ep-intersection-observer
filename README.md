@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/Eutrepe/ep-intersection-observer.svg?branch=main)](https://travis-ci.org/Eutrepe/ep-intersection-observer)
+
+---
+
 # NgxEutrepeIsInViewport
 
 * Directive for Angular 10 based on Intersection Observer to detect element in viewport.
