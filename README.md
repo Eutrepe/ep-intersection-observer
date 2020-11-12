@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/Eutrepe/ep-intersection-observer.svg?branch=main)](https://travis-ci.org/Eutrepe/ep-intersection-observer)
+[![codecov](https://codecov.io/gh/Eutrepe/ep-intersection-observer/branch/main/graph/badge.svg)](https://codecov.io/gh/Eutrepe/ep-intersection-observer)
+
 
 ---
 
