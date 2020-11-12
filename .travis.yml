@@ -5,6 +5,11 @@ node_js:
 
 os:
 - linux
+
+before_install:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+
 addons:
    firefox: "80.0"
 # addons:
