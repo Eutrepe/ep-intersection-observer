@@ -100,7 +100,7 @@
     "publish": "@semantic-release/npm",
     "success": false,
     "fail": false,
-    "branch": "main",
+    "branch": "master",
     "npmPublish": true,
     "tarballDir": "dist",
     "assets": "dist/*.tgz"

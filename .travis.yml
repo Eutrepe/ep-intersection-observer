@@ -27,9 +27,9 @@ jobs:
       strategy: git
       token: $GH_TOKEN
       local_dir: dist/ep-intersection-observer
-    if: branch = main
+    if: branch = master
   - stage: build & publish lib
     script:
     - npm run build:lib
     - npm run publish:lib
-    if: branch = main
+    if: branch = master
