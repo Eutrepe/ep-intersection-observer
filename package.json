@@ -104,5 +104,8 @@
     "npmPublish": true,
     "tarballDir": "dist",
     "assets": "dist/*.tgz"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
