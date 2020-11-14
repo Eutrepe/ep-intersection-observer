@@ -20,7 +20,7 @@ jobs:
   - stage: build & publish showcase
     script:
     - npm run build:demo
-    - npm run publish:demo
+    # - npm run publish:demo
     deploy:
       provider: pages
       cleanup: false
