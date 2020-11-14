@@ -22,7 +22,7 @@
     "adjust-version:lib": "rjp projects/ep-intersection-observer/package.json version $VERSION",
     "adjust-version:main": "rjp package.json version $VERSION"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~10.2.0",
     "@angular/common": "~10.2.0",
