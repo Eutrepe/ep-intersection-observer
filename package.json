@@ -1,6 +1,6 @@
 {
   "name": "@eutrepe/ep-intersection-observer",
-  "version": "10.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -24,52 +24,52 @@
   },
   "private": false,
   "dependencies": {
-    "@angular/animations": "~10.2.0",
-    "@angular/common": "~10.2.0",
-    "@angular/compiler": "~10.2.0",
-    "@angular/core": "~10.2.0",
-    "@angular/forms": "~10.2.0",
-    "@angular/platform-browser": "~10.2.0",
-    "@angular/platform-browser-dynamic": "~10.2.0",
-    "@angular/router": "~10.2.0",
-    "rxjs": "~6.6.0",
-    "tslib": "^2.0.0",
-    "zone.js": "~0.10.2"
+    "@angular/animations": "~10.2.3",
+    "@angular/common": "~10.2.3",
+    "@angular/compiler": "~10.2.3",
+    "@angular/core": "~10.2.3",
+    "@angular/forms": "~10.2.3",
+    "@angular/platform-browser": "~10.2.3",
+    "@angular/platform-browser-dynamic": "~10.2.3",
+    "@angular/router": "~10.2.3",
+    "rxjs": "~6.6.3",
+    "tslib": "^2.0.3",
+    "zone.js": "~0.10.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1002.0",
     "@angular/cli": "~10.2.0",
-    "@angular/compiler-cli": "~10.2.0",
+    "@angular/compiler-cli": "~10.2.3",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@commitlint/prompt": "^11.0.0",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/exec": "^5.0.0",
     "@semantic-release/git": "^9.0.0",
-    "@semantic-release/github": "^7.1.1",
-    "@types/jasmine": "~3.5.0",
-    "@types/jasminewd2": "~2.0.3",
-    "@types/node": "^12.11.1",
+    "@semantic-release/github": "^7.1.2",
+    "@types/jasmine": "~3.6.1",
+    "@types/jasminewd2": "~2.0.8",
+    "@types/node": "^12.19.4",
     "codecov": "^3.8.1",
-    "codelyzer": "^6.0.0",
+    "codelyzer": "^6.0.1",
     "copyfiles": "^2.4.0",
     "husky": "^4.3.0",
     "jasmine-core": "~3.6.0",
-    "jasmine-spec-reporter": "~5.0.0",
-    "karma": "~5.0.0",
+    "jasmine-spec-reporter": "~5.0.2",
+    "karma": "~5.2.3",
     "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage-istanbul-reporter": "~3.0.2",
+    "karma-coverage-istanbul-reporter": "~3.0.3",
     "karma-firefox-launcher": "^2.1.0",
-    "karma-jasmine": "~4.0.0",
-    "karma-jasmine-html-reporter": "^1.5.0",
+    "karma-jasmine": "~4.0.1",
+    "karma-jasmine-html-reporter": "^1.5.4",
     "lint-staged": "^10.5.1",
-    "ng-packagr": "^10.1.0",
+    "ng-packagr": "^10.1.2",
     "prettier": "^2.1.2",
     "protractor": "~7.0.0",
-    "semantic-release": "^17.2.2",
+    "semantic-release": "^17.2.3",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.0.2"
+    "typescript": "~4.0.5"
   },
   "husky": {
     "hooks": {
@@ -92,11 +92,25 @@
     "type": "git",
     "url": "https://github.com/Eutrepe/ep-intersection-observer.git"
   },
+  "description": "Directive and Service for Angular for intersection observer",
+  "author": "Maciej Bobrowski",
+  "bugs": {
+    "url": "https://github.com/Eutrepe/ep-intersection-observer/issues"
+  },
+  "keywords": [
+    "angular",
+    "javascript",
+    "typescript",
+    "directive",
+    "service",
+    "intersection observer"
+  ],
+  "license": "MIT",
   "release": {
     "analyzeCommits": "@semantic-release/commit-analyzer",
     "verifyConditions": "@semantic-release/npm",
     "prepare": "@semantic-release/npm",
-    "generateNotes" : "@semantic-release/release-notes-generator",
+    "generateNotes": "@semantic-release/release-notes-generator",
     "publish": "@semantic-release/npm",
     "success": false,
     "fail": false,
@@ -106,6 +120,7 @@
     "assets": "dist/*.tgz"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
   }
 }
