@@ -21,7 +21,7 @@ jobs:
     script:
     - npm run build:demo
     deploy:
-      provider: pages:git
+      provider: pages
       cleanup: true
       keep_history: false
       strategy: git
