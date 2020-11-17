@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/Eutrepe/ep-intersection-observer.svg?branch=main)](https://travis-ci.org/Eutrepe/ep-intersection-observer)
 [![codecov](https://codecov.io/gh/Eutrepe/ep-intersection-observer/branch/main/graph/badge.svg)](https://codecov.io/gh/Eutrepe/ep-intersection-observer)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+
 
 
 ---

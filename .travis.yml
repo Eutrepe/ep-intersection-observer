@@ -7,7 +7,7 @@ os:
 services:
   - xvfb
 addons:
-   firefox: "80.0"
+   firefox: "82.0"
 jobs:
   include:
   - stage: lint
@@ -20,13 +20,14 @@ jobs:
   - stage: build & publish showcase
     script:
     - npm run build:demo
-    - npm run publish:demo
     deploy:
-      provider: pages
-      cleanup: false
+      provider: pages:git
+      cleanup: true
+      keep_history: false
       strategy: git
       token: $GH_TOKEN
       local_dir: dist/ep-intersection-observer
+      edge: true
     if: branch = master
   - stage: build & publish lib
     script:

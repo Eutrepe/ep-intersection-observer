@@ -13,7 +13,9 @@
     "test:lib-coverage": "ng test ep-intersection-observer --code-coverage --watch=false",
     "report-coverage:lib": "cat ./coverage/ep-intersection-observer/lcov.info | codecov",
     "copy:readme": "copyfiles ./README.md ./dist/ep-intersection-observer",
-    "build:lib": "npm run copy:readme && ng build ep-intersection-observer --prod",
+    "copy:license": "copyfiles ./LICENSE.md ./dist/ep-intersection-observer",
+    "copy:changelog": "copyfiles ./CHANGELOG.md ./dist/ep-intersection-observer",
+    "build:lib": "npm run copy:readme && npm run copy:license && npm run copy:changelog && ng build ep-intersection-observer --prod",
     "build:demo": "ng build ep-intersection-observer-showcase --prod --base-href='https://Eutrepe.github.io/ep-intersection-observer/'",
     "publish:demo": "npx angular-cli-ghpages --dir=./dist/ep-intersection-observer-showcase",
     "publish:lib": "cd dist/ep-intersection-observer && npx semantic-release",
@@ -97,6 +99,7 @@
   "bugs": {
     "url": "https://github.com/Eutrepe/ep-intersection-observer/issues"
   },
+  "homepage": "https://github.com/Eutrepe/ep-intersection-observer#readme",
   "keywords": [
     "angular",
     "javascript",
@@ -117,10 +120,20 @@
     "branch": "master",
     "npmPublish": true,
     "tarballDir": "dist",
-    "assets": "dist/*.tgz"
+    "assets": "dist/*.tgz",
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      ["@semantic-release/changelog", {
+        "changelogFile": "CHANGELOG.md"
+      }],
+      ["@semantic-release/git", {
+        "assets": ["CHANGELOG.md"]
+      }],
+      "@semantic-release/npm"
+    ]
   },
   "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   }
 }
