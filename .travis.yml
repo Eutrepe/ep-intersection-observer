@@ -22,7 +22,7 @@ jobs:
     - npm run build:demo
     deploy:
       provider: pages
-      cleanup: false
+      skip_cleanup: true
       keep_history: false
       strategy: git
       token: $GH_TOKEN
