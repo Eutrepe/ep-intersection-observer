@@ -1,7 +1,5 @@
-[![Build Status](https://travis-ci.org/Eutrepe/ep-intersection-observer.svg?branch=main)](https://travis-ci.org/Eutrepe/ep-intersection-observer)
-[![codecov](https://codecov.io/gh/Eutrepe/ep-intersection-observer/branch/main/graph/badge.svg)](https://codecov.io/gh/Eutrepe/ep-intersection-observer)
+[![Build Status](https://travis-ci.org/Eutrepe/ng-ep-intersection-observer.svg?branch=master)](https://travis-ci.org/Eutrepe/ng-ep-intersection-observer)[![codecov](https://codecov.io/gh/Eutrepe/ng-ep-intersection-observer/branch/master/graph/badge.svg?token=8QNK5IT1KH)](https://codecov.io/gh/Eutrepe/ng-ep-intersection-observer)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-
 
 
 ---
@@ -12,7 +10,7 @@
 
 ## Installation
 
-`npm i --save @eutrepe/@eutrepe/ep-intersection-observer@10`
+`npm i --save @eutrepe/@eutrepe/ng-ep-intersection-observer@10`
 
 You also need polyfill
 
@@ -28,7 +26,7 @@ and add this in your `src/polyfills.ts` file
 # Usage
 
 ### 1) Register the `EpIntersectionObserverModule` in your app module.
- > `import { EpIntersectionObserverModule } from '@eutrepe/ep-intersection-observer'`
+ > `import { EpIntersectionObserverModule } from '@eutrepe/ng-ep-intersection-observer'`
 
  ```typescript
 import { NgModule } from '@angular/core';
@@ -36,7 +34,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
-import { EpIntersectionObserverModule } from '@eutrepe/ep-intersection-observer';
+import { EpIntersectionObserverModule } from '@eutrepe/ng-ep-intersection-observer';
 
 @NgModule({
     declarations: [
@@ -103,7 +101,7 @@ If you have multiple directives in the same options you can use global configura
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
-import { INTERSECTION_OBSERVE_GLOBAL_CONFIG, EpIntersectionObserverStatusService, IntersectionObserverEvent } from '@eutrepe/ep-intersection-observer';
+import { INTERSECTION_OBSERVE_GLOBAL_CONFIG, EpIntersectionObserverStatusService, IntersectionObserverEvent } from '@eutrepe/ng-ep-intersection-observer';
 
 @Component({
   selector: 'app-io-event-example',
@@ -147,7 +145,7 @@ Also if you have multiple directive with multiple events you need add `epIoGroup
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
-import { EpIntersectionObserverWatchService, INTERSECTION_OBSERVE_GLOBAL_CONFIG } from '@eutrepe/ep-intersection-observer';
+import { EpIntersectionObserverWatchService, INTERSECTION_OBSERVE_GLOBAL_CONFIG } from '@eutrepe/ng-ep-intersection-observer';
 
 @Component({
   selector: 'app-io-event-example',

@@ -1,5 +1,5 @@
 {
-  "name": "@eutrepe/ep-intersection-observer",
+  "name": "@eutrepe/ng-ep-intersection-observer",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
@@ -16,7 +16,7 @@
     "copy:license": "copyfiles ./LICENSE.md ./dist/ep-intersection-observer",
     "copy:changelog": "copyfiles ./CHANGELOG.md ./dist/ep-intersection-observer",
     "build:lib": "npm run copy:readme && npm run copy:license && npm run copy:changelog && ng build ep-intersection-observer --prod",
-    "build:demo": "ng build ep-intersection-observer-showcase --prod --base-href='https://Eutrepe.github.io/ep-intersection-observer/'",
+    "build:demo": "ng build ep-intersection-observer-showcase --prod --base-href='https://Eutrepe.github.io/ng-ep-intersection-observer/'",
     "publish:demo": "npx angular-cli-ghpages --dir=./dist/ep-intersection-observer-showcase",
     "publish:lib": "cd dist/ep-intersection-observer && npx semantic-release",
     "semantic-release": "semantic-release",
@@ -92,14 +92,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Eutrepe/ep-intersection-observer.git"
+    "url": "https://github.com/Eutrepe/ng-ep-intersection-observer.git"
   },
   "description": "Directive and Service for Angular for intersection observer",
   "author": "Maciej Bobrowski",
   "bugs": {
-    "url": "https://github.com/Eutrepe/ep-intersection-observer/issues"
+    "url": "https://github.com/Eutrepe/ng-ep-intersection-observer/issues"
   },
-  "homepage": "https://github.com/Eutrepe/ep-intersection-observer#readme",
+  "homepage": "https://github.com/Eutrepe/ng-ep-intersection-observer#readme",
   "keywords": [
     "angular",
     "javascript",
