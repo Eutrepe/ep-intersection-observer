@@ -1,4 +1,4 @@
-import { IntersectionObserverEvent } from './../interfaces/intersection-observer-event';
+import { IntersectionObserverEvent } from './../types/intersection-observer-event';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 

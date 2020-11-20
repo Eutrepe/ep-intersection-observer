@@ -1,10 +1,10 @@
 import { EpIntersectionObserverWatchService } from './../services/ep-intersection-observer-watch.service';
 import { EpIntersectionObserverStatusService } from './../services/ep-intersection-observer-status.service';
 import { INTERSECTION_OBSERVE_WINDOW } from './../tokens/window-token';
-import { IntersectionObserveGlobalConfig } from './../interfaces/intersection-observe-global-config';
+import { IntersectionObserveGlobalConfig } from './../types/intersection-observe-global-config';
 import { INTERSECTION_OBSERVE_GLOBAL_CONFIG } from './../tokens/config-token';
-import { IntersectionObserverEvent } from './../interfaces/intersection-observer-event';
-import { IntersectionObserveConfig } from './../interfaces/intersection-observe-config';
+import { IntersectionObserverEvent } from './../types/intersection-observer-event';
+import { IntersectionObserveConfig } from './../types/intersection-observe-config';
 import {
   AfterViewInit,
   Directive,

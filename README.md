@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/Eutrepe/ng-ep-intersection-observer.svg?branch=master)](https://travis-ci.org/Eutrepe/ng-ep-intersection-observer)[![codecov](https://codecov.io/gh/Eutrepe/ng-ep-intersection-observer/branch/master/graph/badge.svg?token=8QNK5IT1KH)](https://codecov.io/gh/Eutrepe/ng-ep-intersection-observer)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+![GitHub](https://img.shields.io/github/license/Eutrepe/ng-ep-intersection-observer?style=plastic)
 
 
 ---
@@ -89,7 +90,7 @@ export class AppModule { }
 
 #### Advanced 'Lazy'
 
-If you have multiple directives in the same options you can use global configuration per module or per component using `INTERSECTION_OBSERVE_GLOBAL_CONFIG` in `providers` array. Unfortunately here you can't use `this` or other demendency inside `epIoOnActive` and `epIoOnUnactive` functions but you can use subscription from `NgEpIOStatusService` service and manualy control this logic.
+If you have multiple directives in the same options you can use global configuration per module or per component using `INTERSECTION_OBSERVE_GLOBAL_CONFIG` in `providers` array. Unfortunately here you can't use `this` or other dependency inside `epIoOnActive` and `epIoOnUnactive` functions but you can use subscription from `NgEpIOStatusService` service and manually control this logic.
 
  ```html
 <section class="section1" 
@@ -232,23 +233,23 @@ send(status: IntersectionObserverEvent): void
 <br />
 <br />
 
-# Interfaces
+# types
 
 ```typescript 
-export interface IntersectionObserveConfig {
+export type IntersectionObserveConfig = {
   root?: HTMLElement;
   rootMargin?: string;
   threshold?: Array<number>;
 }
 
 
-export interface IntersectionObserverEvent {
+export type IntersectionObserverEvent = {
   el: HTMLElement;
   status: boolean;
 }
 
 
-export interface IntersectionObserveGlobalConfig {
+export type IntersectionObserveGlobalConfig = {
   intersectionConfig?: IntersectionObserveConfig;
   epIoOnActive?: (...args: any[] | null) => void;
   epIoOnUnactive?: (...args: any[] | null) => void;
