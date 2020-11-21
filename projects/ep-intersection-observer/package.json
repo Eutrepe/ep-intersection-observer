@@ -1,5 +1,5 @@
 {
-  "name": "@eutrepe/ep-intersection-observer",
+  "name": "@eutrepe/ng-ep-intersection-observer",
   "version": "1.0.0",
   "peerDependencies": {
     "@angular/common": "^10.2.0",
