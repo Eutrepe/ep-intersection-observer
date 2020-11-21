@@ -1,6 +1,25 @@
 {
   "name": "@eutrepe/ng-ep-intersection-observer",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Eutrepe/ng-ep-intersection-observer.git"
+  },
+  "description": "Directive and Service for Angular for intersection observer",
+  "author": "Maciej Bobrowski",
+  "bugs": {
+    "url": "https://github.com/Eutrepe/ng-ep-intersection-observer/issues"
+  },
+  "homepage": "https://github.com/Eutrepe/ng-ep-intersection-observer#readme",
+  "keywords": [
+    "angular",
+    "javascript",
+    "typescript",
+    "directive",
+    "service",
+    "intersection observer"
+  ],
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -90,25 +109,6 @@
       "@commitlint/config-conventional"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Eutrepe/ng-ep-intersection-observer.git"
-  },
-  "description": "Directive and Service for Angular for intersection observer",
-  "author": "Maciej Bobrowski",
-  "bugs": {
-    "url": "https://github.com/Eutrepe/ng-ep-intersection-observer/issues"
-  },
-  "homepage": "https://github.com/Eutrepe/ng-ep-intersection-observer#readme",
-  "keywords": [
-    "angular",
-    "javascript",
-    "typescript",
-    "directive",
-    "service",
-    "intersection observer"
-  ],
-  "license": "MIT",
   "release": {
     "analyzeCommits": "@semantic-release/commit-analyzer",
     "verifyConditions": "@semantic-release/npm",
