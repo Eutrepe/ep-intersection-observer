@@ -1,4 +1,4 @@
-import { IntersectionObserverEvent } from './../../../../../ep-intersection-observer/src/lib/interfaces/intersection-observer-event';
+import { IntersectionObserverEvent } from './../../../../../ep-intersection-observer/src/lib/types/intersection-observer-event';
 import { INTERSECTION_OBSERVE_GLOBAL_CONFIG } from './../../../../../ep-intersection-observer/src/lib/tokens/config-token';
 import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 

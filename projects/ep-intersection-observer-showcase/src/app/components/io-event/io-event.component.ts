@@ -1,4 +1,4 @@
-import { IntersectionObserverEvent } from './../../../../../ep-intersection-observer/src/lib/interfaces/intersection-observer-event';
+import { IntersectionObserverEvent } from './../../../../../ep-intersection-observer/src/lib/types/intersection-observer-event';
 import { EpIntersectionObserverWatchService } from './../../../../../ep-intersection-observer/src/lib/services/ep-intersection-observer-watch.service';
 import { EpIntersectionObserverStatusService } from './../../../../../ep-intersection-observer/src/lib/services/ep-intersection-observer-status.service';
 import { INTERSECTION_OBSERVE_GLOBAL_CONFIG } from './../../../../../ep-intersection-observer/src/lib/tokens/config-token';
