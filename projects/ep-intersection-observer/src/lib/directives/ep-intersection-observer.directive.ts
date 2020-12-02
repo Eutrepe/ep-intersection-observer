@@ -195,35 +195,5 @@ export class EpIntersectionObserverDirective implements OnInit, AfterViewInit, O
     }
   }
 
-  private checkMedia(): void {
-    const images: Array<HTMLImageElement> = this.el.nativeElement.querySelectorAll('img');
-    const videos: Array<HTMLVideoElement> = this.el.nativeElement.querySelectorAll('video');
-    const audios: Array<HTMLAudioElement> = this.el.nativeElement.querySelectorAll('audio');
-
-    this.assetsLength = images.length + videos.length + audios.length;
-    this.assetsCounter = 0;
-
-    if (this.assetsLength) {
-      images.forEach((image: HTMLImageElement) => {
-        if (image.complete) {
-          this.incrementAssetsCounter();
-        } else {
-          image.addEventListener('load', this.incrementAssetsCounter.bind(this), false);
-          image.addEventListener('error', this.incrementAssetsCounter.bind(this), false);
-        }
-      });
-
-      videos.forEach((video: HTMLVideoElement) => {
-        video.addEventListener('loadeddata', this.incrementAssetsCounter.bind(this), false);
-        video.addEventListener('error', this.incrementAssetsCounter.bind(this), true);
-      });
-
-      audios.forEach((audio: HTMLAudioElement) => {
-        audio.addEventListener('loadeddata', this.incrementAssetsCounter.bind(this), false);
-        audio.addEventListener('error', this.incrementAssetsCounter.bind(this), true);
-      });
-    } else {
-      this.initObserver();
-    }
-  }
+  private checkMedia(): void {}
 }
