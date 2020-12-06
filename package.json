@@ -74,7 +74,7 @@
     "codecov": "^3.8.1",
     "codelyzer": "^6.0.1",
     "copyfiles": "^2.4.1",
-    "husky": "^4.3.0",
+    "husky": "^4.3.4",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.2",
     "karma": "~5.2.3",
@@ -83,7 +83,7 @@
     "karma-firefox-launcher": "^2.1.0",
     "karma-jasmine": "~4.0.1",
     "karma-jasmine-html-reporter": "^1.5.4",
-    "lint-staged": "^10.5.2",
+    "lint-staged": "^10.5.3",
     "ng-packagr": "^10.1.2",
     "prettier": "^2.2.1",
     "protractor": "~7.0.0",
@@ -109,39 +109,9 @@
       "@commitlint/config-conventional"
     ]
   },
-  "release": {
-    "analyzeCommits": "@semantic-release/commit-analyzer",
-    "verifyConditions": "@semantic-release/npm",
-    "prepare": "@semantic-release/npm",
-    "generateNotes": "@semantic-release/release-notes-generator",
-    "publish": "@semantic-release/npm",
-    "success": false,
-    "fail": false,
-    "branch": "master",
-    "npmPublish": true,
-    "tarballDir": "dist",
-    "assets": "dist/*.tgz",
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      [
-        "@semantic-release/changelog",
-        {
-          "changelogFile": "CHANGELOG.md"
-        }
-      ],
-      [
-        "@semantic-release/git",
-        {
-          "assets": [
-            "CHANGELOG.md"
-          ]
-        }
-      ],
-      "@semantic-release/npm"
-    ]
-  },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest"
   }
 }

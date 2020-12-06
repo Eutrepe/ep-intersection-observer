@@ -7,11 +7,11 @@
 
 # NgxEutrepeIsInViewport
 
-* Directive for Angular 10 based on Intersection Observer to detect element in viewport.
+* Directive for Angular 10+ based on Intersection Observer to detect element in viewport.
 
 ## Installation
 
-`npm i --save @eutrepe/@eutrepe/ng-ep-intersection-observer@10`
+`npm i --save @eutrepe/@eutrepe/ng-ep-intersection-observer`
 
 You also need polyfill
 
