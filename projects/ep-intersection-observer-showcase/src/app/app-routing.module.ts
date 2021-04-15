@@ -34,7 +34,11 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [IoDefaultComponent, IoEventAssetsComponent, IoEventComponent, IoMenuComponent],
-  imports: [RouterModule.forRoot(appRoutes), CommonModule, EpIntersectionObserverModule],
+  imports: [
+    RouterModule.forRoot(appRoutes, { relativeLinkResolution: 'legacy' }),
+    CommonModule,
+    EpIntersectionObserverModule,
+  ],
 
   // ***** We use global configuration for all directives in this module.
   providers: [
